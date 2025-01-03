@@ -1,0 +1,40 @@
+albedo_texture_:
+  asset_handle_: 18190134347472666783
+  asset_type_name_: Texture2D
+normal_texture_:
+  asset_handle_: 6639589610278395415
+  asset_type_name_: Texture2D
+metallic_texture_:
+  asset_handle_: 0
+  asset_type_name_: ""
+roughness_texture_:
+  asset_handle_: 16006619677131606421
+  asset_type_name_: Texture2D
+ao_texture_:
+  asset_handle_: 6550464886084682289
+  asset_type_name_: Texture2D
+draw_settings:
+  cull_mode: 0
+  line_width: 1
+  polygon_mode: 0
+  blending: false
+  blending_src_factor: 6
+  blending_dst_factor: 7
+material_properties:
+  albedo_color: [1, 1, 1]
+  subsurface_color: [1, 1, 1]
+  subsurface_factor: 0
+  subsurface_radius: [1, 0.200000003, 0.100000001]
+  metallic: 0.100000001
+  specular: 0.5
+  specular_tint: 0
+  roughness: 0.300000012
+  sheen: 0
+  sheen_tint: 0.5
+  clear_coat: 0
+  clear_coat_roughness: 0.0299999993
+  ior: 1.45000005
+  transmission: 0
+  transmission_roughness: 0
+  emission: 0
+vertex_color_only: false
