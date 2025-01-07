@@ -18,8 +18,8 @@ entity_metadata_list:
     pc:
       - tn: Camera
         e: true
-        x: 1737
-        y: 1085
+        x: 1280
+        y: 701
         use_clear_color: false
         clear_color: [0, 0, 0]
         near_distance: 0.100000001
@@ -27,6 +27,8 @@ entity_metadata_list:
         fov: 120
         background_intensity: 1
         exposure: 1
+        fade_ratio: 0.800000012
+        fade_factor: 1
         skybox:
           asset_handle_: 0
           asset_type_name_: Mesh
@@ -61,7 +63,7 @@ entity_metadata_list:
     pc:
       - tn: Soil
         e: true
-        soil_descriptor:
+        soil_descriptor_ref:
           asset_handle_: 3687705187368430382
           asset_type_name_: SoilDescriptor
   - n: Climate
@@ -72,8 +74,8 @@ entity_metadata_list:
     pc:
       - tn: Climate
         e: true
-        climate_descriptor:
-          asset_handle_: 18020656765688137943
+        climate_descriptor_ref:
+          asset_handle_: 11075045471768930436
           asset_type_name_: ClimateDescriptor
   - n: TreeStructor
     h: 16181465756841632068
@@ -271,8 +273,6 @@ entity_metadata_list:
 systems_:
   []
 LocalAssets:
-  - type_name: PostProcessingStack
-    handle: 10350410281137197788
   - type_name: Material
     handle: 4977678215339870791
     albedo_texture_:
@@ -399,6 +399,8 @@ LocalAssets:
       transmission_roughness: 0
       emission: 0
     vertex_color_only: false
+  - type_name: PostProcessingStack
+    handle: 3057814520553262654
   - type_name: Material
     handle: 9351133328134294989
     albedo_texture_:

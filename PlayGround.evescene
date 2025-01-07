@@ -69,13 +69,13 @@ entity_metadata_list:
       - tn: Soil
         e: true
         soil_descriptor_ref:
-          asset_handle_: 2602803847738692072
+          asset_handle_: 3687705187368430382
           asset_type_name_: SoilDescriptor
 systems_:
   []
 LocalAssets:
   - type_name: PostProcessingStack
-    handle: 162719221966791396
+    handle: 15420202392089202637
 data_component_storage_list:
   - entity_size: 130
     chunk_capacity: 126
