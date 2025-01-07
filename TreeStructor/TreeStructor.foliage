@@ -9,5 +9,5 @@ max_end_distance: 0.200000003
 horizontal_tropism: 0
 gravitropism: 0
 leaf_material:
-  asset_handle_: 0
-  asset_type_name_: ""
+  asset_handle_: 17553957118132556864
+  asset_type_name_: Material
