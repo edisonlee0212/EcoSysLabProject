@@ -18,8 +18,8 @@ entity_metadata_list:
     pc:
       - tn: Camera
         e: true
-        x: 2028
-        y: 1085
+        x: 1280
+        y: 701
         use_clear_color: false
         clear_color: [1, 1, 1]
         near_distance: 0.100000001
@@ -169,7 +169,7 @@ entity_metadata_list:
     r: 11488884880858718334
     pc:
       - tn: MeshRenderer
-        e: false
+        e: true
         cast_shadow: true
         mesh:
           asset_handle_: 5
@@ -190,7 +190,7 @@ entity_metadata_list:
     r: 11488884880858718334
     pc:
       - tn: MeshRenderer
-        e: false
+        e: true
         cast_shadow: true
         mesh:
           asset_handle_: 5
@@ -211,7 +211,7 @@ entity_metadata_list:
     r: 11488884880858718334
     pc:
       - tn: MeshRenderer
-        e: false
+        e: true
         cast_shadow: true
         mesh:
           asset_handle_: 5
@@ -232,7 +232,7 @@ entity_metadata_list:
     r: 11488884880858718334
     pc:
       - tn: MeshRenderer
-        e: false
+        e: true
         cast_shadow: true
         mesh:
           asset_handle_: 5
@@ -268,6 +268,11 @@ entity_metadata_list:
         material:
           asset_handle_: 8052886546139435977
           asset_type_name_: Material
+      - tn: DsBoxCollider
+        e: true
+        bound_color: [1, 0, 1, 0.100000001]
+        scale: [0.5, 0.5, 0.5]
+        softness: 1
   - n: Main Spot Light
     h: 8070120026910769670
     e: true
@@ -394,7 +399,7 @@ LocalAssets:
       emission: 0
     vertex_color_only: false
   - type_name: PostProcessingStack
-    handle: 9441830483080703546
+    handle: 16705952222993814287
   - type_name: Material
     handle: 9351133328134294989
     albedo_texture_:
