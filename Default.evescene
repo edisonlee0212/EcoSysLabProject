@@ -100,6 +100,9 @@ entity_metadata_list:
         leaf_material_ref:
           asset_handle_: 7951526588029562976
           asset_type_name_: Material
+        snow_material_ref:
+          asset_handle_: 11012380534022627926
+          asset_type_name_: Material
   - n: BoxCollider
     h: 5594278585294077197
     e: true
@@ -163,7 +166,7 @@ entity_metadata_list:
         radius: 0.5
   - n: Wall0
     h: 12965353049448159265
-    e: true
+    e: false
     s: false
     p: 11488884880858718334
     r: 11488884880858718334
@@ -180,11 +183,11 @@ entity_metadata_list:
       - tn: DsBoxCollider
         e: true
         bound_color: [1, 0, 1, 0.100000001]
-        scale: [0.5, 0.5, 0.5]
+        scale: [0.50999999, 0.50999999, 0.50999999]
         softness: 1
   - n: Wall1
     h: 6055418297370592062
-    e: true
+    e: false
     s: false
     p: 11488884880858718334
     r: 11488884880858718334
@@ -201,11 +204,11 @@ entity_metadata_list:
       - tn: DsBoxCollider
         e: true
         bound_color: [1, 0, 1, 0.100000001]
-        scale: [0.5, 0.5, 0.5]
+        scale: [0.50999999, 0.50999999, 0.50999999]
         softness: 1
   - n: Wall2
     h: 1237970014654204696
-    e: true
+    e: false
     s: false
     p: 11488884880858718334
     r: 11488884880858718334
@@ -222,11 +225,11 @@ entity_metadata_list:
       - tn: DsBoxCollider
         e: true
         bound_color: [1, 0, 1, 0.100000001]
-        scale: [0.5, 0.5, 0.5]
+        scale: [0.50999999, 0.50999999, 0.50999999]
         softness: 1
   - n: Wall4
     h: 16091469559119167417
-    e: true
+    e: false
     s: false
     p: 11488884880858718334
     r: 11488884880858718334
@@ -243,9 +246,9 @@ entity_metadata_list:
       - tn: DsBoxCollider
         e: true
         bound_color: [1, 0, 1, 0.100000001]
-        scale: [0.5, 0.5, 0.5]
+        scale: [0.50999999, 0.50999999, 0.50999999]
         softness: 1
-  - n: Walls
+  - n: Colliders
     h: 11488884880858718334
     e: true
     s: false
@@ -256,8 +259,7 @@ entity_metadata_list:
     h: 16117392781246928184
     e: true
     s: false
-    p: 11488884880858718334
-    r: 11488884880858718334
+    r: 16117392781246928184
     pc:
       - tn: MeshRenderer
         e: true
@@ -268,11 +270,6 @@ entity_metadata_list:
         material:
           asset_handle_: 8052886546139435977
           asset_type_name_: Material
-      - tn: DsBoxCollider
-        e: true
-        bound_color: [1, 0, 1, 0.100000001]
-        scale: [0.5, 0.5, 0.5]
-        softness: 1
   - n: Main Spot Light
     h: 8070120026910769670
     e: true
@@ -353,6 +350,35 @@ entity_metadata_list:
         diffuse: [0, 1, 0]
         diffuse_brightness: 1
         light_size: 0.00999999978
+  - n: Ground
+    h: 4500016558673320267
+    e: true
+    s: false
+    p: 11488884880858718334
+    r: 11488884880858718334
+    pc:
+      - tn: MeshRenderer
+        e: true
+        cast_shadow: true
+        mesh:
+          asset_handle_: 5
+          asset_type_name_: Mesh
+        material:
+          asset_handle_: 465574329098673888
+          asset_type_name_: Material
+      - tn: DsBoxCollider
+        e: true
+        bound_color: [1, 0, 1, 0.100000001]
+        scale: [0.50999999, 0.50999999, 0.50999999]
+        softness: 1
+  - n: Left Pivot
+    h: 6036242726744849476
+    e: true
+    s: false
+    p: 8067209465027929104
+    r: 8067209465027929104
+    pc:
+      []
 systems_:
   []
 LocalAssets:
@@ -399,7 +425,7 @@ LocalAssets:
       emission: 0
     vertex_color_only: false
   - type_name: PostProcessingStack
-    handle: 16705952222993814287
+    handle: 12528030932889721710
   - type_name: Material
     handle: 9351133328134294989
     albedo_texture_:
@@ -694,10 +720,52 @@ LocalAssets:
       transmission_roughness: 0
       emission: 0
     vertex_color_only: false
+  - type_name: Material
+    handle: 465574329098673888
+    albedo_texture_:
+      asset_handle_: 0
+      asset_type_name_: ""
+    normal_texture_:
+      asset_handle_: 0
+      asset_type_name_: ""
+    metallic_texture_:
+      asset_handle_: 0
+      asset_type_name_: ""
+    roughness_texture_:
+      asset_handle_: 0
+      asset_type_name_: ""
+    ao_texture_:
+      asset_handle_: 0
+      asset_type_name_: ""
+    draw_settings:
+      cull_mode: 0
+      line_width: 1
+      polygon_mode: 0
+      blending: false
+      blending_src_factor: 6
+      blending_dst_factor: 7
+    material_properties:
+      albedo_color: [1, 1, 1]
+      subsurface_color: [1, 1, 1]
+      subsurface_factor: 0
+      subsurface_radius: [1, 0.200000003, 0.100000001]
+      metallic: 0.100000001
+      specular: 0.5
+      specular_tint: 0
+      roughness: 0.300000012
+      sheen: 0
+      sheen_tint: 0.5
+      clear_coat: 0
+      clear_coat_roughness: 0.0299999993
+      ior: 1.45000005
+      transmission: 0
+      transmission_roughness: 0
+      emission: 0
+    vertex_color_only: false
 data_component_storage_list:
   - entity_size: 130
     chunk_capacity: 126
-    entity_alive_count: 19
+    entity_alive_count: 21
     data_component_types:
       - type_name: Transform
         type_size: 64
@@ -716,8 +784,8 @@ data_component_storage_list:
           - d: !!binary "AAA="
       - h: 4980998256074025614
         dc:
-          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAD9/38/AAAAAAAAAAAAAAAAAAAAAP3/fz8AAAAAAAAAAAAAAAAAAAAAAACAPw=="
-          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAD9/38/AAAAAAAAAAAAAAAAAAAAAP3/fz8AAAAAAAAAAAAAAAAAAAAAAACAPw=="
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAD9/38/AAAAAAAAAAAAAAAAAAAAAP3/fz8AAAAAAAAAAAAAoEEAAAAAAACAPw=="
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAD9/38/AAAAAAAAAAAAAAAAAAAAAP3/fz8AAAAAAAAAAAAAoEEAAAAAAACAPw=="
           - d: !!binary "AAA="
       - h: 1555701816245088991
         dc:
@@ -736,8 +804,8 @@ data_component_storage_list:
           - d: !!binary "AAA="
       - h: 8067209465027929104
         dc:
-          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPw=="
-          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPw=="
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPw=="
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPw=="
           - d: !!binary "AAA="
       - h: 5594278585294077197
         dc:
@@ -756,23 +824,23 @@ data_component_storage_list:
           - d: !!binary "AAA="
       - h: 12965353049448159265
         dc:
-          - d: !!binary "AACwQAAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAAAAACBAAACAPw=="
-          - d: !!binary "AACwQAAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAAAAACBAAACAPw=="
+          - d: !!binary "AACwQAAAAAAAAAAAAAAAAAAAAAAAAKBAAAAAAAAAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAEAAACBAAACAPw=="
+          - d: !!binary "AACwQAAAAAAAAAAAAAAAAAAAAAAAAKBAAAAAAAAAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAEAAACBAAACAPw=="
           - d: !!binary "AAA="
       - h: 6055418297370592062
         dc:
-          - d: !!binary "AACwQAAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAAAAACDAAACAPw=="
-          - d: !!binary "AACwQAAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAAAAACDAAACAPw=="
+          - d: !!binary "AACwQAAAAAAAAAAAAAAAAAAAAAAAAKBAAAAAAAAAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAEAAACDAAACAPw=="
+          - d: !!binary "AACwQAAAAAAAAAAAAAAAAAAAAAAAAKBAAAAAAAAAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAEAAACDAAACAPw=="
           - d: !!binary "AAA="
       - h: 1237970014654204696
         dc:
-          - d: !!binary "AAAAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAsEAAAAAAAAAgwAAAAAAAAAAAAACAPw=="
-          - d: !!binary "AAAAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAsEAAAAAAAAAgwAAAAAAAAAAAAACAPw=="
+          - d: !!binary "AAAAPwAAAAAAAAAAAAAAAAAAAAAAAKBAAAAAAAAAAAAAAAAAAAAAAAAAsEAAAAAAAAAgwAAAAEAAAAAAAACAPw=="
+          - d: !!binary "AAAAPwAAAAAAAAAAAAAAAAAAAAAAAKBAAAAAAAAAAAAAAAAAAAAAAAAAsEAAAAAAAAAgwAAAAEAAAAAAAACAPw=="
           - d: !!binary "AAA="
       - h: 16091469559119167417
         dc:
-          - d: !!binary "AAAAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAsEAAAAAAAAAgQAAAAAAAAAAAAACAPw=="
-          - d: !!binary "AAAAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAsEAAAAAAAAAgQAAAAAAAAAAAAACAPw=="
+          - d: !!binary "AAAAPwAAAAAAAAAAAAAAAAAAAAAAAKBAAAAAAAAAAAAAAAAAAAAAAAAAsEAAAAAAAAAgQAAAAEAAAAAAAACAPw=="
+          - d: !!binary "AAAAPwAAAAAAAAAAAAAAAAAAAAAAAKBAAAAAAAAAAAAAAAAAAAAAAAAAsEAAAAAAAAAgQAAAAEAAAAAAAACAPw=="
           - d: !!binary "AAA="
       - h: 11488884880858718334
         dc:
@@ -781,26 +849,36 @@ data_component_storage_list:
           - d: !!binary "AAA="
       - h: 16117392781246928184
         dc:
-          - d: !!binary "AAB6RAAAAAAAAAAAAAAAAAAAAAAAAAA/AAAAAAAAAAAAAAAAAAAAAAAAekQAAAAAAAAAAKiSmb4AAAAAAACAPw=="
-          - d: !!binary "AAB6RAAAAAAAAAAAAAAAAAAAAAAAAAA/AAAAAAAAAAAAAAAAAAAAAAAAekQAAAAAAAAAAKiSmb4AAAAAAACAPw=="
+          - d: !!binary "AAB6RAAAAAAAAAAAAAAAAAAAAAAAAAA/AAAAAAAAAAAAAAAAAAAAAAAAekQAAAAAAAAAAAAAAL8AAAAAAACAPw=="
+          - d: !!binary "AAB6RAAAAAAAAAAAAAAAAAAAAAAAAAA/AAAAAAAAAAAAAAAAAAAAAAAAekQAAAAAAAAAAAAAAL8AAAAAAACAPw=="
           - d: !!binary "AAA="
       - h: 13661618260161450740
         dc:
-          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAABAIAzAACAvwAAAAAAAAAAAACAPwEAgDMAAAAAAAAAAAAA8EEAAAAAAACAPw=="
-          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAD//38z/f9/vwAAAAAAAAAA/f9/P///fzMAAAAAAAAAAP3/70EAAAAAAACAPw=="
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIAz//9/vwAAAAAAAAAA//9/PwAAgDMAAAAAAAAAAAAAAAAAAAAAAACAPw=="
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAD9/38z/P9/vwAAAAAAAAAA/P9/P/3/fzMAAAAAAAAAAAAAoEEAAAAAAACAPw=="
           - d: !!binary "AAA="
       - h: 8070120026910769670
         dc:
-          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAD9/38z/P9/vwAAAAAAAAAA/P9/P/3/fzMAAAAAAAAAAAAA8EEAAAAAAACAPw=="
-          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAD6/38z+f9/vwAAAAAAAAAA+f9/P/r/fzMAAAAAAAAAAP3/70EAAAAAAACAPw=="
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAD8/38z+/9/vwAAAAAAAAAA+/9/P/z/fzMAAAAAAAAAAAAAAAAAAAAAAACAPw=="
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAD5/38z+P9/vwAAAAAAAAAA+P9/P/n/fzMAAAAAAAAAAAAAoEEAAAAAAACAPw=="
           - d: !!binary "AAA="
       - h: 7319666515229790969
         dc:
-          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAABAIAzAACAvwAAAAAAAAAAAACAPwEAgDMAAAAAAAAAAAAA8EEAAAAAAACAPw=="
-          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAD//38z/f9/vwAAAAAAAAAA/f9/P///fzMAAAAAAAAAAP3/70EAAAAAAACAPw=="
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIAz//9/vwAAAAAAAAAA//9/PwAAgDMAAAAAAAAAAAAAAAAAAAAAAACAPw=="
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAD9/38z/P9/vwAAAAAAAAAA/P9/P/3/fzMAAAAAAAAAAAAAoEEAAAAAAACAPw=="
           - d: !!binary "AAA="
       - h: 16973995182276512939
         dc:
-          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAD//38z/v9/vwAAAAAAAAAA/v9/P///fzMAAAAAAAAAAAAA8EEAAAAAAACAPw=="
-          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAD8/38z+/9/vwAAAAAAAAAA+/9/P/z/fzMAAAAAAAAAAP3/70EAAAAAAACAPw=="
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAD+/38z/f9/vwAAAAAAAAAA/f9/P/7/fzMAAAAAAAAAAAAAAAAAAAAAAACAPw=="
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAD7/38z+v9/vwAAAAAAAAAA+v9/P/v/fzMAAAAAAAAAAAAAoEEAAAAAAACAPw=="
+          - d: !!binary "AAA="
+      - h: 4500016558673320267
+        dc:
+          - d: !!binary "AACwQAAAAAAAAAAAAAAAAAAAAAAAAAA/AAAAAAAAAAAAAAAAAAAAAAAAsEAAAAAAAAAAAFK4nr4AAAAAAACAPw=="
+          - d: !!binary "AACwQAAAAAAAAAAAAAAAAAAAAAAAAAA/AAAAAAAAAAAAAAAAAAAAAAAAsEAAAAAAAAAAAFK4nr4AAAAAAACAPw=="
+          - d: !!binary "AAA="
+      - h: 6036242726744849476
+        dc:
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPw=="
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPw=="
           - d: !!binary "AAA="
