@@ -379,11 +379,38 @@ entity_metadata_list:
     r: 8067209465027929104
     pc:
       []
+  - n: PhysicsDemo
+    h: 15507241657296934491
+    e: true
+    s: false
+    r: 15507241657296934491
+    pc:
+      - tn: DynamicStrandsDemo
+        e: true
+      - tn: DynamicTreeStrands
+        e: true
+        bark_material_ref:
+          asset_handle_: 7305147544876250888
+          asset_type_name_: Material
+        inner_wood_material_ref:
+          asset_handle_: 10046604926553922103
+          asset_type_name_: Material
+        splinter_material_ref:
+          asset_handle_: 8352772041477049905
+          asset_type_name_: Material
+        leaf_material_ref:
+          asset_handle_: 8091636453328031762
+          asset_type_name_: Material
+        snow_material_ref:
+          asset_handle_: 6779778895185122651
+          asset_type_name_: Material
 systems_:
   []
 LocalAssets:
+  - type_name: PostProcessingStack
+    handle: 939081721498455069
   - type_name: Material
-    handle: 9269403427852511889
+    handle: 9351133328134294989
     albedo_texture_:
       asset_handle_: 0
       asset_type_name_: ""
@@ -424,10 +451,8 @@ LocalAssets:
       transmission_roughness: 0
       emission: 0
     vertex_color_only: false
-  - type_name: PostProcessingStack
-    handle: 12528030932889721710
   - type_name: Material
-    handle: 9351133328134294989
+    handle: 9269403427852511889
     albedo_texture_:
       asset_handle_: 0
       asset_type_name_: ""
@@ -765,7 +790,7 @@ LocalAssets:
 data_component_storage_list:
   - entity_size: 130
     chunk_capacity: 126
-    entity_alive_count: 21
+    entity_alive_count: 22
     data_component_types:
       - type_name: Transform
         type_size: 64
@@ -880,5 +905,10 @@ data_component_storage_list:
       - h: 6036242726744849476
         dc:
           - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPw=="
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPw=="
+          - d: !!binary "AAA="
+      - h: 15507241657296934491
+        dc:
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPw=="
           - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPw=="
           - d: !!binary "AAA="
