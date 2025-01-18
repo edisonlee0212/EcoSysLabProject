@@ -42,7 +42,7 @@ entity_metadata_list:
         scene_camera_pitch_angle_: 0
   - n: Lighting
     h: 4980998256074025614
-    e: true
+    e: false
     s: false
     r: 4980998256074025614
     pc:
@@ -107,7 +107,8 @@ entity_metadata_list:
     h: 5594278585294077197
     e: true
     s: false
-    r: 5594278585294077197
+    p: 11488884880858718334
+    r: 11488884880858718334
     pc:
       - tn: MeshRenderer
         e: true
@@ -127,7 +128,8 @@ entity_metadata_list:
     h: 9785811340505075165
     e: true
     s: false
-    r: 9785811340505075165
+    p: 11488884880858718334
+    r: 11488884880858718334
     pc:
       - tn: MeshRenderer
         e: true
@@ -148,7 +150,8 @@ entity_metadata_list:
     h: 13374184260884109780
     e: true
     s: false
-    r: 13374184260884109780
+    p: 11488884880858718334
+    r: 11488884880858718334
     pc:
       - tn: MeshRenderer
         e: true
@@ -187,7 +190,7 @@ entity_metadata_list:
         softness: 1
   - n: Wall1
     h: 6055418297370592062
-    e: false
+    e: true
     s: false
     p: 11488884880858718334
     r: 11488884880858718334
@@ -208,7 +211,7 @@ entity_metadata_list:
         softness: 1
   - n: Wall2
     h: 1237970014654204696
-    e: false
+    e: true
     s: false
     p: 11488884880858718334
     r: 11488884880858718334
@@ -229,7 +232,7 @@ entity_metadata_list:
         softness: 1
   - n: Wall4
     h: 16091469559119167417
-    e: false
+    e: true
     s: false
     p: 11488884880858718334
     r: 11488884880858718334
@@ -272,7 +275,7 @@ entity_metadata_list:
           asset_type_name_: Material
   - n: Main Spot Light
     h: 8070120026910769670
-    e: true
+    e: false
     s: false
     p: 4980998256074025614
     r: 4980998256074025614
@@ -292,7 +295,7 @@ entity_metadata_list:
         light_size: 0.00999999978
   - n: Spot Light 3
     h: 13661618260161450740
-    e: true
+    e: false
     s: false
     p: 4980998256074025614
     r: 4980998256074025614
@@ -312,7 +315,7 @@ entity_metadata_list:
         light_size: 0.00999999978
   - n: Spot Light 1
     h: 7319666515229790969
-    e: true
+    e: false
     s: false
     p: 4980998256074025614
     r: 4980998256074025614
@@ -332,7 +335,7 @@ entity_metadata_list:
         light_size: 0.00999999978
   - n: Spot Light 2
     h: 16973995182276512939
-    e: true
+    e: false
     s: false
     p: 4980998256074025614
     r: 4980998256074025614
@@ -404,11 +407,28 @@ entity_metadata_list:
         snow_material_ref:
           asset_handle_: 6779778895185122651
           asset_type_name_: Material
+  - n: Point Light
+    h: 4241568024623862863
+    e: true
+    s: false
+    r: 4241568024623862863
+    pc:
+      - tn: PointLight
+        e: true
+        cast_shadow: true
+        shadow_distance: 100
+        constant: 1
+        linear: 0.0700000003
+        quadratic: 0.00150000001
+        bias: 0.00200000009
+        diffuse: [1, 1, 1]
+        diffuse_brightness: 5
+        light_size: 0.00999999978
 systems_:
   []
 LocalAssets:
   - type_name: PostProcessingStack
-    handle: 939081721498455069
+    handle: 11616704354345214510
   - type_name: Material
     handle: 9351133328134294989
     albedo_texture_:
@@ -790,7 +810,7 @@ LocalAssets:
 data_component_storage_list:
   - entity_size: 130
     chunk_capacity: 126
-    entity_alive_count: 22
+    entity_alive_count: 23
     data_component_types:
       - type_name: Transform
         type_size: 64
@@ -899,8 +919,8 @@ data_component_storage_list:
           - d: !!binary "AAA="
       - h: 4500016558673320267
         dc:
-          - d: !!binary "AACwQAAAAAAAAAAAAAAAAAAAAAAAAAA/AAAAAAAAAAAAAAAAAAAAAAAAsEAAAAAAAAAAAFK4nr4AAAAAAACAPw=="
-          - d: !!binary "AACwQAAAAAAAAAAAAAAAAAAAAAAAAAA/AAAAAAAAAAAAAAAAAAAAAAAAsEAAAAAAAAAAAFK4nr4AAAAAAACAPw=="
+          - d: !!binary "AACwQAAAAAAAAAAAAAAAAAAAAAAAAAA/AAAAAAAAAAAAAAAAAAAAAAAAsEAAAAAAAAAAAIJChb4AAAAAAACAPw=="
+          - d: !!binary "AACwQAAAAAAAAAAAAAAAAAAAAAAAAAA/AAAAAAAAAAAAAAAAAAAAAAAAsEAAAAAAAAAAAIJChb4AAAAAAACAPw=="
           - d: !!binary "AAA="
       - h: 6036242726744849476
         dc:
@@ -911,4 +931,9 @@ data_component_storage_list:
         dc:
           - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPw=="
           - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPw=="
+          - d: !!binary "AAA="
+      - h: 4241568024623862863
+        dc:
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAwAAAQEAAAAA/AACAPw=="
+          - d: !!binary "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAwAAAQEAAAAA/AACAPw=="
           - d: !!binary "AAA="
