@@ -1,18 +1,18 @@
 albedo_texture_:
-  asset_handle_: 18190134347472666783
-  asset_type_name_: Texture2D
+  asset_handle_: 17166877242824287727
+  type_name_: Texture2D
 normal_texture_:
-  asset_handle_: 6639589610278395415
-  asset_type_name_: Texture2D
+  asset_handle_: 6830519197179028238
+  type_name_: Texture2D
 metallic_texture_:
   asset_handle_: 0
-  asset_type_name_: ""
+  type_name_: ""
 roughness_texture_:
-  asset_handle_: 16006619677131606421
-  asset_type_name_: Texture2D
+  asset_handle_: 12048888210624443983
+  type_name_: Texture2D
 ao_texture_:
-  asset_handle_: 6550464886084682289
-  asset_type_name_: Texture2D
+  asset_handle_: 0
+  type_name_: ""
 draw_settings:
   cull_mode: 0
   line_width: 1
