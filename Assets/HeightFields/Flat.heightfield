@@ -1,22 +1,105 @@
 precision_level: 4
-noises_2d:
-  min_max: [-1000, 1000]
-  noise_descriptors:
-    - type: 2
-      frequency: 1
-      intensity: 1
-      multiplier: 0.0199999996
-      min: -10
-      max: 10
-      offset: 0
-      shift: [0, 0, 0]
-      ridgid: true
-    - type: 2
-      frequency: 8
-      intensity: 1
-      multiplier: 0.00999999978
-      min: -10
-      max: 10
-      offset: 0
-      shift: [0, 0, 0]
-      ridgid: false
+position_offset: [0, 0]
+noises_graph:
+  node_graph:
+    Nodes:
+      - P: [760, 916]
+        I:
+          - 0
+        D:
+          T: 2
+          C:
+            {}
+      - P: [239, 815]
+        O:
+          - 0
+          - 1
+        D:
+          T: 1
+          C:
+            {}
+      - P: [350, 779]
+        I:
+          - 1
+          - 2
+        O:
+          - 2
+        D:
+          T: 10
+          C:
+            frequency: 10
+      - P: [611, 888]
+        I:
+          - 3
+          - 4
+        O:
+          - 3
+        D:
+          T: 15
+          C:
+            {}
+      - P: [451, 947]
+        O:
+          - 4
+        D:
+          T: 3
+          C:
+            value: 0.00999999978
+    OutputPins:
+      - L:
+          - 0
+        D:
+          N: x
+      - L:
+          - 1
+        D:
+          N: y
+      - L:
+          - 3
+        D:
+          N: Output
+      - L:
+          - 2
+        D:
+          N: Output
+      - L:
+          - 4
+        D:
+          N: Output
+    InputPins:
+      - L: 2
+        D:
+          N: Input
+      - L: 0
+        D:
+          N: x
+      - L: 1
+        D:
+          N: y
+      - L: 3
+        D:
+          N: a
+      - L: 4
+        D:
+          N: b
+    Links:
+      - O: 0
+        I: 1
+        D:
+          {}
+      - O: 1
+        I: 2
+        D:
+          {}
+      - O: 3
+        I: 0
+        D:
+          {}
+      - O: 2
+        I: 3
+        D:
+          {}
+      - O: 4
+        I: 4
+        D:
+          {}
