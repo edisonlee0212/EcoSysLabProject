@@ -10,9 +10,6 @@ foliage_descriptor:
 bark_descriptor:
   asset_handle_: 12010549631526729238
   type_name_: BasicBarkDescriptor
-fruit_descriptor:
-  asset_handle_: 0
-  type_name_: ""
-flower_descriptor:
-  asset_handle_: 0
-  type_name_: ""
+reproduction_module_descriptor:
+  asset_handle_: 13085458157742909635
+  type_name_: BasicReproductionModuleDescriptor
