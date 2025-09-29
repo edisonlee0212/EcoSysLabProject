@@ -1,0 +1,500 @@
+base_root_node_count: 1
+straight_tap_root: 19.2
+growth_rate: 0.25
+lateral_node_flushing_probability: 0.1
+branching_angle_graph:
+  node_graph:
+    ZoomScale: 1
+    Panning: [0, 0]
+    AutoPanningDelta: [0, 0]
+    Nodes:
+      - P: [583, 261]
+        I:
+          - 0
+        D:
+          T: 2
+          C:
+            {}
+      - P: [100, 250]
+        O:
+          - 0
+          - 1
+          - 2
+          - 3
+        D:
+          T: 1
+          C:
+            {}
+      - P: [208, 172]
+        O:
+          - 4
+        D:
+          T: 3
+          C:
+            value: 30
+      - P: [196, 305]
+        I:
+          - 1
+          - 2
+          - 3
+        O:
+          - 5
+        D:
+          T: 11
+          C:
+            frequency: 10
+      - P: [347, 396]
+        I:
+          - 4
+          - 5
+        O:
+          - 6
+        D:
+          T: 15
+          C:
+            {}
+      - P: [502, 331]
+        I:
+          - 6
+          - 7
+        O:
+          - 7
+        D:
+          T: 13
+          C:
+            {}
+      - P: [212, 458]
+        O:
+          - 8
+        D:
+          T: 3
+          C:
+            value: 10
+    OutputPins:
+      - L:
+          - 1
+        D:
+          N: x
+      - L:
+          - 2
+        D:
+          N: y
+      - L:
+          - 3
+        D:
+          N: z
+      - D:
+          N: w
+      - L:
+          - 0
+        D:
+          N: Output
+      - L:
+          - 4
+        D:
+          N: Output
+      - L:
+          - 5
+        D:
+          N: Output
+      - L:
+          - 6
+        D:
+          N: Output
+      - L:
+          - 7
+        D:
+          N: Output
+    InputPins:
+      - L: 6
+        D:
+          N: Input
+      - L: 1
+        D:
+          N: x
+      - L: 2
+        D:
+          N: y
+      - L: 3
+        D:
+          N: z
+      - L: 4
+        D:
+          N: a
+      - L: 7
+        D:
+          N: b
+      - L: 0
+        D:
+          N: a
+      - L: 5
+        D:
+          N: b
+    Links:
+      - O: 4
+        I: 6
+        D:
+          {}
+      - O: 0
+        I: 1
+        D:
+          {}
+      - O: 1
+        I: 2
+        D:
+          {}
+      - O: 2
+        I: 3
+        D:
+          {}
+      - O: 5
+        I: 4
+        D:
+          {}
+      - O: 6
+        I: 7
+        D:
+          {}
+      - O: 7
+        I: 0
+        D:
+          {}
+      - O: 8
+        I: 5
+        D:
+          {}
+roll_angle_graph:
+  node_graph:
+    ZoomScale: 1
+    Panning: [0, 0]
+    AutoPanningDelta: [0, 0]
+    Nodes:
+      - P: [598, 272]
+        I:
+          - 0
+        D:
+          T: 2
+          C:
+            {}
+      - P: [100, 250]
+        O:
+          - 0
+          - 1
+          - 2
+          - 3
+        D:
+          T: 1
+          C:
+            {}
+      - P: [203, 123]
+        O:
+          - 4
+        D:
+          T: 3
+          C:
+            value: 120
+      - P: [445, 239]
+        I:
+          - 1
+          - 2
+        O:
+          - 5
+        D:
+          T: 13
+          C:
+            {}
+      - P: [197, 289]
+        I:
+          - 3
+          - 4
+          - 5
+        O:
+          - 6
+        D:
+          T: 11
+          C:
+            frequency: 10
+      - P: [232, 440]
+        O:
+          - 7
+        D:
+          T: 3
+          C:
+            value: 360
+      - P: [363, 355]
+        I:
+          - 6
+          - 7
+        O:
+          - 8
+        D:
+          T: 15
+          C:
+            {}
+    OutputPins:
+      - L:
+          - 2
+        D:
+          N: x
+      - L:
+          - 3
+        D:
+          N: y
+      - L:
+          - 4
+        D:
+          N: z
+      - D:
+          N: w
+      - L:
+          - 0
+        D:
+          N: Output
+      - L:
+          - 1
+        D:
+          N: Output
+      - L:
+          - 5
+        D:
+          N: Output
+      - L:
+          - 6
+        D:
+          N: Output
+      - L:
+          - 7
+        D:
+          N: Output
+    InputPins:
+      - L: 1
+        D:
+          N: Input
+      - L: 0
+        D:
+          N: a
+      - L: 7
+        D:
+          N: b
+      - L: 2
+        D:
+          N: x
+      - L: 3
+        D:
+          N: y
+      - L: 4
+        D:
+          N: z
+      - L: 5
+        D:
+          N: a
+      - L: 6
+        D:
+          N: b
+    Links:
+      - O: 4
+        I: 1
+        D:
+          {}
+      - O: 5
+        I: 0
+        D:
+          {}
+      - O: 0
+        I: 3
+        D:
+          {}
+      - O: 1
+        I: 4
+        D:
+          {}
+      - O: 2
+        I: 5
+        D:
+          {}
+      - O: 6
+        I: 6
+        D:
+          {}
+      - O: 7
+        I: 7
+        D:
+          {}
+      - O: 8
+        I: 2
+        D:
+          {}
+apical_angle_graph:
+  node_graph:
+    ZoomScale: 1
+    Panning: [0, 0]
+    AutoPanningDelta: [0, 0]
+    Nodes:
+      - P: [647, 273]
+        I:
+          - 0
+        D:
+          T: 2
+          C:
+            {}
+      - P: [100, 250]
+        O:
+          - 0
+          - 1
+          - 2
+          - 3
+        D:
+          T: 1
+          C:
+            {}
+      - P: [201, 137]
+        O:
+          - 4
+        D:
+          T: 3
+          C:
+            value: -10
+      - P: [205, 279]
+        I:
+          - 1
+          - 2
+          - 3
+        O:
+          - 5
+        D:
+          T: 11
+          C:
+            frequency: 10
+      - P: [181, 459]
+        O:
+          - 6
+        D:
+          T: 3
+          C:
+            value: 20
+      - P: [402, 406]
+        I:
+          - 4
+          - 5
+        O:
+          - 7
+        D:
+          T: 15
+          C:
+            {}
+      - P: [561, 293]
+        I:
+          - 6
+          - 7
+        O:
+          - 8
+        D:
+          T: 13
+          C:
+            {}
+    OutputPins:
+      - L:
+          - 0
+        D:
+          N: x
+      - L:
+          - 1
+        D:
+          N: y
+      - L:
+          - 2
+        D:
+          N: z
+      - D:
+          N: w
+      - L:
+          - 5
+        D:
+          N: Output
+      - L:
+          - 3
+        D:
+          N: Output
+      - L:
+          - 4
+        D:
+          N: Output
+      - L:
+          - 6
+        D:
+          N: Output
+      - L:
+          - 7
+        D:
+          N: Output
+    InputPins:
+      - L: 7
+        D:
+          N: Input
+      - L: 0
+        D:
+          N: x
+      - L: 1
+        D:
+          N: y
+      - L: 2
+        D:
+          N: z
+      - L: 3
+        D:
+          N: a
+      - L: 4
+        D:
+          N: b
+      - L: 5
+        D:
+          N: a
+      - L: 6
+        D:
+          N: b
+    Links:
+      - O: 0
+        I: 1
+        D:
+          {}
+      - O: 1
+        I: 2
+        D:
+          {}
+      - O: 2
+        I: 3
+        D:
+          {}
+      - O: 5
+        I: 4
+        D:
+          {}
+      - O: 6
+        I: 5
+        D:
+          {}
+      - O: 4
+        I: 6
+        D:
+          {}
+      - O: 7
+        I: 7
+        D:
+          {}
+      - O: 8
+        I: 0
+        D:
+          {}
+root_node_length: 0.03
+root_node_length_thickness_factor: 0.15
+end_node_thickness: 0.004
+thickness_accumulation_factor: 0.45
+thickness_age_factor: 0
+apical_control: 0
+soil_density_friction: [0, 0]
+root_distance_control: 0
+apical_dominance: 3
+apical_dominance_loss: 0.11
+tropism_intensity: 0.19
+tropism_switch_probability: 1
+tropism_switch_base_distance_factor: 0

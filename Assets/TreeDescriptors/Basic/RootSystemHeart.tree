@@ -2,7 +2,7 @@ shoot_descriptor:
   asset_handle_: 16644833989700348496
   type_name_: BasicShootDescriptor
 root_descriptor:
-  asset_handle_: 0
+  asset_handle_: 1935083705109843695
   type_name_: BasicRootDescriptor
 pruning_descriptor:
   asset_handle_: 13517411364174693967
