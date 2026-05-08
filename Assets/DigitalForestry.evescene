@@ -1,11 +1,11 @@
 environment:
   background_color: [1, 1, 1]
-  environment_gamma: 2.20000005
-  ambient_light_intensity: 0.800000012
+  environment_gamma: 2.2
+  ambient_light_intensity: 0.8
   environment_type: 0
   environmental_map:
     asset_handle_: 0
-    asset_type_name_: ""
+    type_name_: ""
 main_camera:
   entity_handle_: 6473886116481235690
   private_component_type_name_: Camera
@@ -18,23 +18,25 @@ entity_metadata_list:
     pc:
       - tn: Camera
         e: true
-        x: 1280
-        y: 701
+        x: 1
+        y: 1
         use_clear_color: false
-        clear_color: [0, 0, 0]
-        near_distance: 0.100000001
+        clear_color: [0, 0, 0, 1]
+        near_distance: 0.1
         far_distance: 200
         fov: 120
         background_intensity: 1
-        exposure: 2.20000005
-        fade_ratio: 0.800000012
+        fade_ratio: 0.8
         fade_factor: 1
+        sample_size: 4
+        bounce: 4
+        gamma: 2.2
         skybox:
           asset_handle_: 0
-          asset_type_name_: Cubemap
+          type_name_: ""
         post_processing_stack_ref:
           asset_handle_: 6198354092322921722
-          asset_type_name_: PostProcessingStack
+          type_name_: PostProcessingStack
   - n: Directional Light
     h: 4549134868711857240
     e: true
@@ -44,11 +46,11 @@ entity_metadata_list:
       - tn: DirectionalLight
         e: true
         cast_shadow: true
-        bias: 0.100000001
+        bias: 0.1
         diffuse: [1, 1, 1]
         diffuse_brightness: 1
-        light_size: 0.00999999978
-        normal_offset: 0.0500000007
+        light_size: 0.01
+        normal_offset: 0.05
   - n: Climate
     h: 16141221334833496213
     e: true
@@ -59,7 +61,7 @@ entity_metadata_list:
         e: true
         climate_descriptor_ref:
           asset_handle_: 11075045471768930436
-          asset_type_name_: ClimateDescriptor
+          type_name_: ClimateDescriptor
   - n: Soil
     h: 8756950485509484996
     e: true
@@ -70,12 +72,12 @@ entity_metadata_list:
         e: true
         soil_descriptor_ref:
           asset_handle_: 2602803847738692072
-          asset_type_name_: SoilDescriptor
+          type_name_: SoilDescriptor
 systems_:
   []
 LocalAssets:
   - type_name: PostProcessingStack
-    handle: 162719221966791396
+    handle: 10896859141611430273
 data_component_storage_list:
   - entity_size: 130
     chunk_capacity: 126

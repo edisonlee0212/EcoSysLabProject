@@ -1,11 +1,11 @@
 environment:
   background_color: [1, 1, 1]
-  environment_gamma: 2.20000005
+  environment_gamma: 2.2
   ambient_light_intensity: 0.5
   environment_type: 0
   environmental_map:
     asset_handle_: 0
-    asset_type_name_: ""
+    type_name_: ""
 main_camera:
   entity_handle_: 594487307992612524
   private_component_type_name_: Camera
@@ -18,26 +18,29 @@ entity_metadata_list:
     pc:
       - tn: Camera
         e: true
-        x: 1280
-        y: 701
+        x: 749
+        y: 436
         use_clear_color: false
-        clear_color: [1, 1, 1]
-        near_distance: 0.100000001
+        clear_color: [0, 0, 0, 1]
+        near_distance: 0.1
         far_distance: 200
         fov: 120
-        background_intensity: 0.0500000007
-        fade_ratio: 0.00999999978
+        background_intensity: 0.05
+        fade_ratio: 0.01
         fade_factor: 1
+        sample_size: 4
+        bounce: 4
+        gamma: 2.2
         skybox:
           asset_handle_: 0
-          asset_type_name_: Mesh
+          type_name_: ""
         post_processing_stack_ref:
           asset_handle_: 15888462117146613974
-          asset_type_name_: PostProcessingStack
+          type_name_: PostProcessingStack
       - tn: PlayerController
         e: true
         velocity: 20
-        sensitivity: 0.100000001
+        sensitivity: 0.1
         scene_camera_yaw_angle_: -89
         scene_camera_pitch_angle_: 0
   - n: Lighting
@@ -57,7 +60,7 @@ entity_metadata_list:
         e: true
         soil_descriptor_ref:
           asset_handle_: 3687705187368430382
-          asset_type_name_: SoilDescriptor
+          type_name_: SoilDescriptor
   - n: Climate
     h: 14400056215606250942
     e: true
@@ -68,7 +71,7 @@ entity_metadata_list:
         e: true
         climate_descriptor_ref:
           asset_handle_: 11075045471768930436
-          asset_type_name_: ClimateDescriptor
+          type_name_: ClimateDescriptor
   - n: TreeStructor
     h: 16181465756841632068
     e: true
@@ -77,9 +80,9 @@ entity_metadata_list:
     pc:
       - tn: TreeStructor
         e: true
-        tree_descriptor:
-          asset_handle_: 11433142983488560832
-          asset_type_name_: TreeDescriptor
+        tree_descriptor_ref:
+          asset_handle_: 0
+          type_name_: ""
   - n: DynamicTreeStrands
     h: 8067209465027929104
     e: true
@@ -88,21 +91,681 @@ entity_metadata_list:
     pc:
       - tn: DynamicTreeStrands
         e: true
+        seed: 0
+        enable_physics: true
+        limit_strand_length: false
+        max_strand_length: 1
         bark_material_ref:
           asset_handle_: 4917947815999316794
-          asset_type_name_: Material
+          type_name_: Material
         inner_wood_material_ref:
           asset_handle_: 9624006256773925213
-          asset_type_name_: Material
+          type_name_: Material
         splinter_material_ref:
           asset_handle_: 5185743299100336336
-          asset_type_name_: Material
+          type_name_: Material
         leaf_material_ref:
           asset_handle_: 7951526588029562976
-          asset_type_name_: Material
+          type_name_: Material
         snow_material_ref:
           asset_handle_: 11012380534022627926
-          asset_type_name_: Material
+          type_name_: Material
+        segment_pair_material_ref:
+          asset_handle_: 2687366730956306219
+          type_name_: Material
+        wireframe_material_ref:
+          asset_handle_: 9867260873765604062
+          type_name_: Material
+        shoot_strand_model:
+          strand_model_skeleton:
+            max_node_index_: 0
+            max_flow_index_: 0
+            new_version_: 0
+            min: [0, 0, 0]
+            max: [0, 0, 0]
+            nodes_.flow_handle_: !!binary "AAAAAA=="
+            nodes_.parent_handle_: !!binary "/////w=="
+            nodes_.apical_: !!binary "AQAAAA=="
+            nodes_.index_: !!binary "AAAAAA=="
+            nodes_.info.global_position: !!binary "AAAAAAAAAAAAAAAA"
+            nodes_.info.global_rotation: !!binary "AAAAAAAAAAAAAAAAAACAPw=="
+            nodes_.info.length: !!binary "AAAAAA=="
+            nodes_.info.thickness: !!binary "zczMPQ=="
+            nodes_.info.color: !!binary "AACAPwAAgD8AAIA/AACAPw=="
+            nodes_.info.locked: !!binary "AAAAAA=="
+            nodes_.info.leaves: !!binary "AAAAAA=="
+            nodes_.info.fruits: !!binary "AAAAAA=="
+            nodes_.info:
+              - {}
+            nodes_.data:
+              - profile:
+                  particles_2d_.data:
+                    []
+            flows_.parent_handle_: !!binary "/////w=="
+            flows_.apical_: !!binary "AAAAAA=="
+            flows_.index_: !!binary "AAAAAA=="
+            flows_:
+              - nodes_: !!binary "AAAAAA=="
+                data:
+                  {}
+            data:
+              strand_group:
+                strands_:
+                  []
+                strand_segments_.data:
+                  []
+                data:
+                  {}
+              node.data.offset: !!binary "AAAAAAAAAAA="
+              node.data.twist_angle: !!binary "AAAAAA=="
+              node.data.split: !!binary "AAAAAA=="
+              node.data.strand_radius: !!binary "bxIDOw=="
+              node.data.strand_count: !!binary "AAAAAA=="
+        initialize_parameters:
+          min_segment_length: 0.03
+          max_segment_length: 0.06
+          uniform_subdivision: 5
+          damage_graph:
+            node_graph:
+              Panning: [0, 0]
+              AutoPanningDelta: [0, 0]
+              Nodes:
+                - P: [400, 250]
+                  I:
+                    - 0
+                  D:
+                    T: 2
+                    C:
+                      {}
+                - P: [100, 250]
+                  O:
+                    - 0
+                    - 1
+                    - 2
+                  D:
+                    T: 1
+                    C:
+                      {}
+              OutputPins:
+                - D:
+                    N: x
+                - D:
+                    N: y
+                - D:
+                    N: z
+              InputPins:
+                - L: -1
+                  D:
+                    N: Input
+              Links:
+                []
+          damage_scale_factor: [0.01, 0.01, 0.01]
+          neighbor_vertical_range: 3
+          neighbor_horizontal_range: 3
+          sapwood_offset: 0.05
+          wood_transition: 0.005
+          modulus_graph:
+            node_graph:
+              Panning: [0, 0]
+              AutoPanningDelta: [0, 0]
+              Nodes:
+                - P: [500, 200]
+                  I:
+                    - 0
+                    - 1
+                  D:
+                    T: 3
+                    C:
+                      {}
+                - P: [500, 400]
+                  I:
+                    - 2
+                    - 3
+                  D:
+                    T: 4
+                    C:
+                      {}
+                - P: [500, 600]
+                  I:
+                    - 4
+                    - 5
+                  D:
+                    T: 5
+                    C:
+                      {}
+                - P: [500, 800]
+                  I:
+                    - 6
+                    - 7
+                  D:
+                    T: 6
+                    C:
+                      {}
+                - P: [100, 300]
+                  O:
+                    - 0
+                    - 1
+                    - 2
+                    - 3
+                  D:
+                    T: 1
+                    C:
+                      {}
+                - P: [300, 150]
+                  O:
+                    - 4
+                  D:
+                    T: 13
+                    C:
+                      value: 600
+                - P: [300, 250]
+                  O:
+                    - 5
+                  D:
+                    T: 13
+                    C:
+                      value: 700
+                - P: [300, 350]
+                  O:
+                    - 6
+                  D:
+                    T: 13
+                    C:
+                      value: 9.5
+                - P: [300, 450]
+                  O:
+                    - 7
+                  D:
+                    T: 13
+                    C:
+                      value: 13.5
+                - P: [300, 550]
+                  O:
+                    - 8
+                  D:
+                    T: 13
+                    C:
+                      value: 0.15
+                - P: [300, 650]
+                  O:
+                    - 9
+                  D:
+                    T: 13
+                    C:
+                      value: 2
+                - P: [300, 750]
+                  O:
+                    - 10
+                  D:
+                    T: 13
+                    C:
+                      value: 0.15
+                - P: [300, 850]
+                  O:
+                    - 11
+                  D:
+                    T: 13
+                    C:
+                      value: 2
+              OutputPins:
+                - D:
+                    N: root distance
+                - D:
+                    N: polar distance
+                - D:
+                    N: polar angle
+                - D:
+                    N: profile boundary distance
+                - L:
+                    - 0
+                  D:
+                    N: Output
+                - L:
+                    - 1
+                  D:
+                    N: Output
+                - L:
+                    - 2
+                  D:
+                    N: Output
+                - L:
+                    - 3
+                  D:
+                    N: Output
+                - L:
+                    - 4
+                  D:
+                    N: Output
+                - L:
+                    - 5
+                  D:
+                    N: Output
+                - L:
+                    - 6
+                  D:
+                    N: Output
+                - L:
+                    - 7
+                  D:
+                    N: Output
+              InputPins:
+                - L: 0
+                  D:
+                    N: min
+                - L: 1
+                  D:
+                    N: max
+                - L: 2
+                  D:
+                    N: lower bound
+                - L: 3
+                  D:
+                    N: upper bound
+                - L: 4
+                  D:
+                    N: lower bound
+                - L: 5
+                  D:
+                    N: upper bound
+                - L: 6
+                  D:
+                    N: lower bound
+                - L: 7
+                  D:
+                    N: upper bound
+              Links:
+                - O: 4
+                  I: 0
+                  D:
+                    {}
+                - O: 5
+                  I: 1
+                  D:
+                    {}
+                - O: 6
+                  I: 2
+                  D:
+                    {}
+                - O: 7
+                  I: 3
+                  D:
+                    {}
+                - O: 8
+                  I: 4
+                  D:
+                    {}
+                - O: 9
+                  I: 5
+                  D:
+                    {}
+                - O: 10
+                  I: 6
+                  D:
+                    {}
+                - O: 11
+                  I: 7
+                  D:
+                    {}
+          strength_graph:
+            node_graph:
+              Panning: [0, 0]
+              AutoPanningDelta: [0, 0]
+              Nodes:
+                - P: [500, 200]
+                  I:
+                    - 0
+                    - 1
+                  D:
+                    T: 7
+                    C:
+                      {}
+                - P: [500, 400]
+                  I:
+                    - 2
+                    - 3
+                  D:
+                    T: 8
+                    C:
+                      {}
+                - P: [500, 600]
+                  I:
+                    - 4
+                    - 5
+                  D:
+                    T: 9
+                    C:
+                      {}
+                - P: [500, 800]
+                  I:
+                    - 6
+                    - 7
+                  D:
+                    T: 10
+                    C:
+                      {}
+                - P: [500, 1000]
+                  I:
+                    - 8
+                    - 9
+                  D:
+                    T: 11
+                    C:
+                      {}
+                - P: [100, 600]
+                  O:
+                    - 0
+                    - 1
+                    - 2
+                    - 3
+                  D:
+                    T: 1
+                    C:
+                      {}
+                - P: [300, 150]
+                  O:
+                    - 4
+                  D:
+                    T: 13
+                    C:
+                      value: 500
+                - P: [300, 250]
+                  O:
+                    - 5
+                  D:
+                    T: 13
+                    C:
+                      value: 250
+                - P: [300, 350]
+                  O:
+                    - 6
+                  D:
+                    T: 13
+                    C:
+                      value: 500
+                - P: [300, 450]
+                  O:
+                    - 7
+                  D:
+                    T: 13
+                    C:
+                      value: 250
+                - P: [300, 550]
+                  O:
+                    - 8
+                  D:
+                    T: 13
+                    C:
+                      value: 500
+                - P: [300, 650]
+                  O:
+                    - 9
+                  D:
+                    T: 13
+                    C:
+                      value: 250
+                - P: [300, 750]
+                  O:
+                    - 10
+                  D:
+                    T: 13
+                    C:
+                      value: 500
+                - P: [300, 850]
+                  O:
+                    - 11
+                  D:
+                    T: 13
+                    C:
+                      value: 250
+                - P: [300, 950]
+                  O:
+                    - 12
+                  D:
+                    T: 13
+                    C:
+                      value: 250
+                - P: [300, 1050]
+                  O:
+                    - 13
+                  D:
+                    T: 13
+                    C:
+                      value: 125
+              OutputPins:
+                - D:
+                    N: root distance
+                - D:
+                    N: polar distance
+                - D:
+                    N: polar angle
+                - D:
+                    N: profile boundary distance
+                - L:
+                    - 0
+                  D:
+                    N: Output
+                - L:
+                    - 1
+                  D:
+                    N: Output
+                - L:
+                    - 2
+                  D:
+                    N: Output
+                - L:
+                    - 3
+                  D:
+                    N: Output
+                - L:
+                    - 4
+                  D:
+                    N: Output
+                - L:
+                    - 5
+                  D:
+                    N: Output
+                - L:
+                    - 6
+                  D:
+                    N: Output
+                - L:
+                    - 7
+                  D:
+                    N: Output
+                - L:
+                    - 8
+                  D:
+                    N: Output
+                - L:
+                    - 9
+                  D:
+                    N: Output
+              InputPins:
+                - L: 0
+                  D:
+                    N: lower bound
+                - L: 1
+                  D:
+                    N: upper bound
+                - L: 2
+                  D:
+                    N: lower bound
+                - L: 3
+                  D:
+                    N: upper bound
+                - L: 4
+                  D:
+                    N: lower bound
+                - L: 5
+                  D:
+                    N: upper bound
+                - L: 6
+                  D:
+                    N: lower bound
+                - L: 7
+                  D:
+                    N: upper bound
+                - L: 8
+                  D:
+                    N: lower bound
+                - L: 9
+                  D:
+                    N: upper bound
+              Links:
+                - O: 4
+                  I: 0
+                  D:
+                    {}
+                - O: 5
+                  I: 1
+                  D:
+                    {}
+                - O: 6
+                  I: 2
+                  D:
+                    {}
+                - O: 7
+                  I: 3
+                  D:
+                    {}
+                - O: 8
+                  I: 4
+                  D:
+                    {}
+                - O: 9
+                  I: 5
+                  D:
+                    {}
+                - O: 10
+                  I: 6
+                  D:
+                    {}
+                - O: 11
+                  I: 7
+                  D:
+                    {}
+                - O: 12
+                  I: 8
+                  D:
+                    {}
+                - O: 13
+                  I: 9
+                  D:
+                    {}
+          trunk_additional_strength: true
+          biological_properties_graph:
+            node_graph:
+              Panning: [0, 0]
+              AutoPanningDelta: [0, 0]
+              Nodes:
+                - P: [400, 250]
+                  I:
+                    - 0
+                    - 1
+                    - 2
+                  D:
+                    T: 12
+                    C:
+                      {}
+                - P: [100, 250]
+                  O:
+                    - 0
+                    - 1
+                    - 2
+                    - 3
+                  D:
+                    T: 1
+                    C:
+                      {}
+                - P: [200, 150]
+                  O:
+                    - 4
+                  D:
+                    T: 13
+                    C:
+                      value: 0.3
+                - P: [200, 250]
+                  O:
+                    - 5
+                  D:
+                    T: 13
+                    C:
+                      value: 0.1
+                - P: [200, 350]
+                  O:
+                    - 6
+                  D:
+                    T: 13
+                    C:
+                      value: 1250
+              OutputPins:
+                - D:
+                    N: root distance
+                - D:
+                    N: polar distance
+                - D:
+                    N: polar angle
+                - D:
+                    N: profile boundary distance
+                - L:
+                    - 0
+                  D:
+                    N: Output
+                - L:
+                    - 1
+                  D:
+                    N: Output
+                - L:
+                    - 2
+                  D:
+                    N: Output
+              InputPins:
+                - L: 0
+                  D:
+                    N: trunk input
+                - L: 1
+                  D:
+                    N: trunk transition
+                - L: 2
+                  D:
+                    N: trunk additional strength factor
+              Links:
+                - O: 4
+                  I: 0
+                  D:
+                    {}
+                - O: 5
+                  I: 1
+                  D:
+                    {}
+                - O: 6
+                  I: 2
+                  D:
+                    {}
+          leaf_position_alpha:
+            mean: 0.01
+            deviation: 0.1
+          leaf_rotation_alpha:
+            mean: 0.01
+            deviation: 0.1
+          max_leaf_position_strain:
+            mean: 300
+            deviation: 5
+          max_leaf_rotation_strain:
+            mean: 300
+            deviation: 5
+          root_transform: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          use_cgal: false
+          triangulate_per_bundle: false
+          alpha: 5e-05
+          bifurcation_alpha: 5e-05
+          max_dist_squared: 1
+          use_cubic_hermite_spline: false
+          min_bundle_size: 3
+          foliage_descriptor:
+            asset_handle_: 0
+            type_name_: ""
+        initialized_from_tree: false
   - n: BoxCollider
     h: 5594278585294077197
     e: true
@@ -115,13 +778,13 @@ entity_metadata_list:
         cast_shadow: true
         mesh:
           asset_handle_: 5
-          asset_type_name_: Mesh
+          type_name_: Mesh
         material:
           asset_handle_: 9351133328134294989
-          asset_type_name_: Material
+          type_name_: Material
       - tn: DsBoxCollider
         e: true
-        bound_color: [1, 0, 1, 0.100000001]
+        bound_color: [1, 0, 1, 0.1]
         scale: [0.5, 0.5, 0.5]
         softness: 1
   - n: CylinderCollider
@@ -136,13 +799,13 @@ entity_metadata_list:
         cast_shadow: true
         mesh:
           asset_handle_: 7
-          asset_type_name_: Mesh
+          type_name_: Mesh
         material:
           asset_handle_: 9269403427852511889
-          asset_type_name_: Material
+          type_name_: Material
       - tn: DsCylinderCollider
         e: true
-        bound_color: [1, 0, 1, 0.100000001]
+        bound_color: [1, 0, 1, 0.1]
         radius: 0.5
         height: 0.5
         softness: 1
@@ -158,13 +821,13 @@ entity_metadata_list:
         cast_shadow: true
         mesh:
           asset_handle_: 4
-          asset_type_name_: Mesh
+          type_name_: Mesh
         material:
           asset_handle_: 14316066197675944754
-          asset_type_name_: Material
+          type_name_: Material
       - tn: DsSphereCollider
         e: true
-        bound_color: [1, 0, 1, 0.100000001]
+        bound_color: [1, 0, 1, 0.1]
         softness: 0.5
         radius: 0.5
   - n: Wall0
@@ -179,14 +842,14 @@ entity_metadata_list:
         cast_shadow: true
         mesh:
           asset_handle_: 5
-          asset_type_name_: Mesh
+          type_name_: Mesh
         material:
           asset_handle_: 1878344000892373111
-          asset_type_name_: Material
+          type_name_: Material
       - tn: DsBoxCollider
         e: true
-        bound_color: [1, 0, 1, 0.100000001]
-        scale: [0.50999999, 0.50999999, 0.50999999]
+        bound_color: [1, 0, 1, 0.1]
+        scale: [0.51, 0.51, 0.51]
         softness: 1
   - n: Wall1
     h: 6055418297370592062
@@ -199,15 +862,15 @@ entity_metadata_list:
         e: true
         cast_shadow: true
         mesh:
-          asset_handle_: 5
-          asset_type_name_: Mesh
+          asset_handle_: 3
+          type_name_: Mesh
         material:
           asset_handle_: 571672489586621582
-          asset_type_name_: Material
+          type_name_: Material
       - tn: DsBoxCollider
         e: true
-        bound_color: [1, 0, 1, 0.100000001]
-        scale: [0.50999999, 0.50999999, 0.50999999]
+        bound_color: [1, 0, 1, 0.1]
+        scale: [0.51, 0.51, 0.51]
         softness: 1
   - n: Wall2
     h: 1237970014654204696
@@ -220,15 +883,15 @@ entity_metadata_list:
         e: true
         cast_shadow: true
         mesh:
-          asset_handle_: 5
-          asset_type_name_: Mesh
+          asset_handle_: 3
+          type_name_: Mesh
         material:
           asset_handle_: 4977678215339870791
-          asset_type_name_: Material
+          type_name_: Material
       - tn: DsBoxCollider
         e: true
-        bound_color: [1, 0, 1, 0.100000001]
-        scale: [0.50999999, 0.50999999, 0.50999999]
+        bound_color: [1, 0, 1, 0.1]
+        scale: [0.51, 0.51, 0.51]
         softness: 1
   - n: Wall4
     h: 16091469559119167417
@@ -241,15 +904,15 @@ entity_metadata_list:
         e: true
         cast_shadow: true
         mesh:
-          asset_handle_: 5
-          asset_type_name_: Mesh
+          asset_handle_: 3
+          type_name_: Mesh
         material:
           asset_handle_: 9799836859279381246
-          asset_type_name_: Material
+          type_name_: Material
       - tn: DsBoxCollider
         e: true
-        bound_color: [1, 0, 1, 0.100000001]
-        scale: [0.50999999, 0.50999999, 0.50999999]
+        bound_color: [1, 0, 1, 0.1]
+        scale: [0.51, 0.51, 0.51]
         softness: 1
   - n: Colliders
     h: 11488884880858718334
@@ -268,11 +931,11 @@ entity_metadata_list:
         e: true
         cast_shadow: true
         mesh:
-          asset_handle_: 5
-          asset_type_name_: Mesh
+          asset_handle_: 3
+          type_name_: Mesh
         material:
           asset_handle_: 8052886546139435977
-          asset_type_name_: Material
+          type_name_: Material
   - n: Main Spot Light
     h: 8070120026910769670
     e: false
@@ -289,10 +952,10 @@ entity_metadata_list:
         constant: 1
         linear: 0
         quadratic: 0
-        bias: 0.00200000009
+        bias: 0.002
         diffuse: [1, 1, 1]
         diffuse_brightness: 1
-        light_size: 0.00999999978
+        light_size: 0.01
   - n: Spot Light 3
     h: 13661618260161450740
     e: false
@@ -309,10 +972,10 @@ entity_metadata_list:
         constant: 1
         linear: 0
         quadratic: 0
-        bias: 0.00200000009
+        bias: 0.002
         diffuse: [0, 0, 1]
         diffuse_brightness: 1
-        light_size: 0.00999999978
+        light_size: 0.01
   - n: Spot Light 1
     h: 7319666515229790969
     e: false
@@ -329,10 +992,10 @@ entity_metadata_list:
         constant: 1
         linear: 0
         quadratic: 0
-        bias: 0.00200000009
+        bias: 0.002
         diffuse: [1, 0, 0]
         diffuse_brightness: 1
-        light_size: 0.00999999978
+        light_size: 0.01
   - n: Spot Light 2
     h: 16973995182276512939
     e: false
@@ -349,10 +1012,10 @@ entity_metadata_list:
         constant: 1
         linear: 0
         quadratic: 0
-        bias: 0.00200000009
+        bias: 0.002
         diffuse: [0, 1, 0]
         diffuse_brightness: 1
-        light_size: 0.00999999978
+        light_size: 0.01
   - n: Ground
     h: 4500016558673320267
     e: true
@@ -364,15 +1027,15 @@ entity_metadata_list:
         e: true
         cast_shadow: true
         mesh:
-          asset_handle_: 5
-          asset_type_name_: Mesh
+          asset_handle_: 3
+          type_name_: Mesh
         material:
           asset_handle_: 465574329098673888
-          asset_type_name_: Material
+          type_name_: Material
       - tn: DsBoxCollider
         e: true
-        bound_color: [1, 0, 1, 0.100000001]
-        scale: [0.50999999, 0.50999999, 0.50999999]
+        bound_color: [1, 0, 1, 0.1]
+        scale: [0.51, 0.51, 0.51]
         softness: 1
   - n: Left Pivot
     h: 6036242726744849476
@@ -392,21 +1055,681 @@ entity_metadata_list:
         e: true
       - tn: DynamicTreeStrands
         e: true
+        seed: 0
+        enable_physics: true
+        limit_strand_length: false
+        max_strand_length: 1
         bark_material_ref:
           asset_handle_: 7305147544876250888
-          asset_type_name_: Material
+          type_name_: Material
         inner_wood_material_ref:
           asset_handle_: 10046604926553922103
-          asset_type_name_: Material
+          type_name_: Material
         splinter_material_ref:
           asset_handle_: 8352772041477049905
-          asset_type_name_: Material
+          type_name_: Material
         leaf_material_ref:
           asset_handle_: 8091636453328031762
-          asset_type_name_: Material
+          type_name_: Material
         snow_material_ref:
           asset_handle_: 6779778895185122651
-          asset_type_name_: Material
+          type_name_: Material
+        segment_pair_material_ref:
+          asset_handle_: 7242916194693188474
+          type_name_: Material
+        wireframe_material_ref:
+          asset_handle_: 8122490110133178126
+          type_name_: Material
+        shoot_strand_model:
+          strand_model_skeleton:
+            max_node_index_: 0
+            max_flow_index_: 0
+            new_version_: 0
+            min: [0, 0, 0]
+            max: [0, 0, 0]
+            nodes_.flow_handle_: !!binary "AAAAAA=="
+            nodes_.parent_handle_: !!binary "/////w=="
+            nodes_.apical_: !!binary "AQAAAA=="
+            nodes_.index_: !!binary "AAAAAA=="
+            nodes_.info.global_position: !!binary "AAAAAAAAAAAAAAAA"
+            nodes_.info.global_rotation: !!binary "AAAAAAAAAAAAAAAAAACAPw=="
+            nodes_.info.length: !!binary "AAAAAA=="
+            nodes_.info.thickness: !!binary "zczMPQ=="
+            nodes_.info.color: !!binary "AACAPwAAgD8AAIA/AACAPw=="
+            nodes_.info.locked: !!binary "AAAAAA=="
+            nodes_.info.leaves: !!binary "AAAAAA=="
+            nodes_.info.fruits: !!binary "AAAAAA=="
+            nodes_.info:
+              - {}
+            nodes_.data:
+              - profile:
+                  particles_2d_.data:
+                    []
+            flows_.parent_handle_: !!binary "/////w=="
+            flows_.apical_: !!binary "AAAAAA=="
+            flows_.index_: !!binary "AAAAAA=="
+            flows_:
+              - nodes_: !!binary "AAAAAA=="
+                data:
+                  {}
+            data:
+              strand_group:
+                strands_:
+                  []
+                strand_segments_.data:
+                  []
+                data:
+                  {}
+              node.data.offset: !!binary "AAAAAAAAAAA="
+              node.data.twist_angle: !!binary "AAAAAA=="
+              node.data.split: !!binary "AAAAAA=="
+              node.data.strand_radius: !!binary "bxIDOw=="
+              node.data.strand_count: !!binary "AAAAAA=="
+        initialize_parameters:
+          min_segment_length: 0.03
+          max_segment_length: 0.06
+          uniform_subdivision: 5
+          damage_graph:
+            node_graph:
+              Panning: [0, 0]
+              AutoPanningDelta: [0, 0]
+              Nodes:
+                - P: [400, 250]
+                  I:
+                    - 0
+                  D:
+                    T: 2
+                    C:
+                      {}
+                - P: [100, 250]
+                  O:
+                    - 0
+                    - 1
+                    - 2
+                  D:
+                    T: 1
+                    C:
+                      {}
+              OutputPins:
+                - D:
+                    N: x
+                - D:
+                    N: y
+                - D:
+                    N: z
+              InputPins:
+                - L: -1
+                  D:
+                    N: Input
+              Links:
+                []
+          damage_scale_factor: [0.01, 0.01, 0.01]
+          neighbor_vertical_range: 3
+          neighbor_horizontal_range: 3
+          sapwood_offset: 0.05
+          wood_transition: 0.005
+          modulus_graph:
+            node_graph:
+              Panning: [0, 0]
+              AutoPanningDelta: [0, 0]
+              Nodes:
+                - P: [500, 200]
+                  I:
+                    - 0
+                    - 1
+                  D:
+                    T: 3
+                    C:
+                      {}
+                - P: [500, 400]
+                  I:
+                    - 2
+                    - 3
+                  D:
+                    T: 4
+                    C:
+                      {}
+                - P: [500, 600]
+                  I:
+                    - 4
+                    - 5
+                  D:
+                    T: 5
+                    C:
+                      {}
+                - P: [500, 800]
+                  I:
+                    - 6
+                    - 7
+                  D:
+                    T: 6
+                    C:
+                      {}
+                - P: [100, 300]
+                  O:
+                    - 0
+                    - 1
+                    - 2
+                    - 3
+                  D:
+                    T: 1
+                    C:
+                      {}
+                - P: [300, 150]
+                  O:
+                    - 4
+                  D:
+                    T: 13
+                    C:
+                      value: 600
+                - P: [300, 250]
+                  O:
+                    - 5
+                  D:
+                    T: 13
+                    C:
+                      value: 700
+                - P: [300, 350]
+                  O:
+                    - 6
+                  D:
+                    T: 13
+                    C:
+                      value: 9.5
+                - P: [300, 450]
+                  O:
+                    - 7
+                  D:
+                    T: 13
+                    C:
+                      value: 13.5
+                - P: [300, 550]
+                  O:
+                    - 8
+                  D:
+                    T: 13
+                    C:
+                      value: 0.15
+                - P: [300, 650]
+                  O:
+                    - 9
+                  D:
+                    T: 13
+                    C:
+                      value: 2
+                - P: [300, 750]
+                  O:
+                    - 10
+                  D:
+                    T: 13
+                    C:
+                      value: 0.15
+                - P: [300, 850]
+                  O:
+                    - 11
+                  D:
+                    T: 13
+                    C:
+                      value: 2
+              OutputPins:
+                - D:
+                    N: root distance
+                - D:
+                    N: polar distance
+                - D:
+                    N: polar angle
+                - D:
+                    N: profile boundary distance
+                - L:
+                    - 0
+                  D:
+                    N: Output
+                - L:
+                    - 1
+                  D:
+                    N: Output
+                - L:
+                    - 2
+                  D:
+                    N: Output
+                - L:
+                    - 3
+                  D:
+                    N: Output
+                - L:
+                    - 4
+                  D:
+                    N: Output
+                - L:
+                    - 5
+                  D:
+                    N: Output
+                - L:
+                    - 6
+                  D:
+                    N: Output
+                - L:
+                    - 7
+                  D:
+                    N: Output
+              InputPins:
+                - L: 0
+                  D:
+                    N: min
+                - L: 1
+                  D:
+                    N: max
+                - L: 2
+                  D:
+                    N: lower bound
+                - L: 3
+                  D:
+                    N: upper bound
+                - L: 4
+                  D:
+                    N: lower bound
+                - L: 5
+                  D:
+                    N: upper bound
+                - L: 6
+                  D:
+                    N: lower bound
+                - L: 7
+                  D:
+                    N: upper bound
+              Links:
+                - O: 4
+                  I: 0
+                  D:
+                    {}
+                - O: 5
+                  I: 1
+                  D:
+                    {}
+                - O: 6
+                  I: 2
+                  D:
+                    {}
+                - O: 7
+                  I: 3
+                  D:
+                    {}
+                - O: 8
+                  I: 4
+                  D:
+                    {}
+                - O: 9
+                  I: 5
+                  D:
+                    {}
+                - O: 10
+                  I: 6
+                  D:
+                    {}
+                - O: 11
+                  I: 7
+                  D:
+                    {}
+          strength_graph:
+            node_graph:
+              Panning: [0, 0]
+              AutoPanningDelta: [0, 0]
+              Nodes:
+                - P: [500, 200]
+                  I:
+                    - 0
+                    - 1
+                  D:
+                    T: 7
+                    C:
+                      {}
+                - P: [500, 400]
+                  I:
+                    - 2
+                    - 3
+                  D:
+                    T: 8
+                    C:
+                      {}
+                - P: [500, 600]
+                  I:
+                    - 4
+                    - 5
+                  D:
+                    T: 9
+                    C:
+                      {}
+                - P: [500, 800]
+                  I:
+                    - 6
+                    - 7
+                  D:
+                    T: 10
+                    C:
+                      {}
+                - P: [500, 1000]
+                  I:
+                    - 8
+                    - 9
+                  D:
+                    T: 11
+                    C:
+                      {}
+                - P: [100, 600]
+                  O:
+                    - 0
+                    - 1
+                    - 2
+                    - 3
+                  D:
+                    T: 1
+                    C:
+                      {}
+                - P: [300, 150]
+                  O:
+                    - 4
+                  D:
+                    T: 13
+                    C:
+                      value: 500
+                - P: [300, 250]
+                  O:
+                    - 5
+                  D:
+                    T: 13
+                    C:
+                      value: 250
+                - P: [300, 350]
+                  O:
+                    - 6
+                  D:
+                    T: 13
+                    C:
+                      value: 500
+                - P: [300, 450]
+                  O:
+                    - 7
+                  D:
+                    T: 13
+                    C:
+                      value: 250
+                - P: [300, 550]
+                  O:
+                    - 8
+                  D:
+                    T: 13
+                    C:
+                      value: 500
+                - P: [300, 650]
+                  O:
+                    - 9
+                  D:
+                    T: 13
+                    C:
+                      value: 250
+                - P: [300, 750]
+                  O:
+                    - 10
+                  D:
+                    T: 13
+                    C:
+                      value: 500
+                - P: [300, 850]
+                  O:
+                    - 11
+                  D:
+                    T: 13
+                    C:
+                      value: 250
+                - P: [300, 950]
+                  O:
+                    - 12
+                  D:
+                    T: 13
+                    C:
+                      value: 250
+                - P: [300, 1050]
+                  O:
+                    - 13
+                  D:
+                    T: 13
+                    C:
+                      value: 125
+              OutputPins:
+                - D:
+                    N: root distance
+                - D:
+                    N: polar distance
+                - D:
+                    N: polar angle
+                - D:
+                    N: profile boundary distance
+                - L:
+                    - 0
+                  D:
+                    N: Output
+                - L:
+                    - 1
+                  D:
+                    N: Output
+                - L:
+                    - 2
+                  D:
+                    N: Output
+                - L:
+                    - 3
+                  D:
+                    N: Output
+                - L:
+                    - 4
+                  D:
+                    N: Output
+                - L:
+                    - 5
+                  D:
+                    N: Output
+                - L:
+                    - 6
+                  D:
+                    N: Output
+                - L:
+                    - 7
+                  D:
+                    N: Output
+                - L:
+                    - 8
+                  D:
+                    N: Output
+                - L:
+                    - 9
+                  D:
+                    N: Output
+              InputPins:
+                - L: 0
+                  D:
+                    N: lower bound
+                - L: 1
+                  D:
+                    N: upper bound
+                - L: 2
+                  D:
+                    N: lower bound
+                - L: 3
+                  D:
+                    N: upper bound
+                - L: 4
+                  D:
+                    N: lower bound
+                - L: 5
+                  D:
+                    N: upper bound
+                - L: 6
+                  D:
+                    N: lower bound
+                - L: 7
+                  D:
+                    N: upper bound
+                - L: 8
+                  D:
+                    N: lower bound
+                - L: 9
+                  D:
+                    N: upper bound
+              Links:
+                - O: 4
+                  I: 0
+                  D:
+                    {}
+                - O: 5
+                  I: 1
+                  D:
+                    {}
+                - O: 6
+                  I: 2
+                  D:
+                    {}
+                - O: 7
+                  I: 3
+                  D:
+                    {}
+                - O: 8
+                  I: 4
+                  D:
+                    {}
+                - O: 9
+                  I: 5
+                  D:
+                    {}
+                - O: 10
+                  I: 6
+                  D:
+                    {}
+                - O: 11
+                  I: 7
+                  D:
+                    {}
+                - O: 12
+                  I: 8
+                  D:
+                    {}
+                - O: 13
+                  I: 9
+                  D:
+                    {}
+          trunk_additional_strength: true
+          biological_properties_graph:
+            node_graph:
+              Panning: [0, 0]
+              AutoPanningDelta: [0, 0]
+              Nodes:
+                - P: [400, 250]
+                  I:
+                    - 0
+                    - 1
+                    - 2
+                  D:
+                    T: 12
+                    C:
+                      {}
+                - P: [100, 250]
+                  O:
+                    - 0
+                    - 1
+                    - 2
+                    - 3
+                  D:
+                    T: 1
+                    C:
+                      {}
+                - P: [200, 150]
+                  O:
+                    - 4
+                  D:
+                    T: 13
+                    C:
+                      value: 0.3
+                - P: [200, 250]
+                  O:
+                    - 5
+                  D:
+                    T: 13
+                    C:
+                      value: 0.1
+                - P: [200, 350]
+                  O:
+                    - 6
+                  D:
+                    T: 13
+                    C:
+                      value: 1250
+              OutputPins:
+                - D:
+                    N: root distance
+                - D:
+                    N: polar distance
+                - D:
+                    N: polar angle
+                - D:
+                    N: profile boundary distance
+                - L:
+                    - 0
+                  D:
+                    N: Output
+                - L:
+                    - 1
+                  D:
+                    N: Output
+                - L:
+                    - 2
+                  D:
+                    N: Output
+              InputPins:
+                - L: 0
+                  D:
+                    N: trunk input
+                - L: 1
+                  D:
+                    N: trunk transition
+                - L: 2
+                  D:
+                    N: trunk additional strength factor
+              Links:
+                - O: 4
+                  I: 0
+                  D:
+                    {}
+                - O: 5
+                  I: 1
+                  D:
+                    {}
+                - O: 6
+                  I: 2
+                  D:
+                    {}
+          leaf_position_alpha:
+            mean: 0.01
+            deviation: 0.1
+          leaf_rotation_alpha:
+            mean: 0.01
+            deviation: 0.1
+          max_leaf_position_strain:
+            mean: 300
+            deviation: 5
+          max_leaf_rotation_strain:
+            mean: 300
+            deviation: 5
+          root_transform: [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+          use_cgal: false
+          triangulate_per_bundle: false
+          alpha: 5e-05
+          bifurcation_alpha: 5e-05
+          max_dist_squared: 1
+          use_cubic_hermite_spline: false
+          min_bundle_size: 3
+          foliage_descriptor:
+            asset_handle_: 0
+            type_name_: ""
+        initialized_from_tree: false
   - n: Point Light
     h: 4241568024623862863
     e: true
@@ -418,76 +1741,34 @@ entity_metadata_list:
         cast_shadow: true
         shadow_distance: 100
         constant: 1
-        linear: 0.0700000003
-        quadratic: 0.00150000001
-        bias: 0.00200000009
+        linear: 0.07
+        quadratic: 0.0015
+        bias: 0.002
         diffuse: [1, 1, 1]
         diffuse_brightness: 5
-        light_size: 0.00999999978
+        light_size: 0.01
 systems_:
   []
 LocalAssets:
   - type_name: PostProcessingStack
-    handle: 8148753713003576210
-  - type_name: Material
-    handle: 1878344000892373111
-    albedo_texture_:
-      asset_handle_: 0
-      asset_type_name_: ""
-    normal_texture_:
-      asset_handle_: 0
-      asset_type_name_: ""
-    metallic_texture_:
-      asset_handle_: 0
-      asset_type_name_: ""
-    roughness_texture_:
-      asset_handle_: 0
-      asset_type_name_: ""
-    ao_texture_:
-      asset_handle_: 0
-      asset_type_name_: ""
-    draw_settings:
-      cull_mode: 0
-      line_width: 1
-      polygon_mode: 0
-      blending: false
-      blending_src_factor: 6
-      blending_dst_factor: 7
-    material_properties:
-      albedo_color: [1, 1, 1]
-      subsurface_color: [1, 1, 1]
-      subsurface_factor: 0
-      subsurface_radius: [1, 0.200000003, 0.100000001]
-      metallic: 0.100000001
-      specular: 0.5
-      specular_tint: 0
-      roughness: 0.300000012
-      sheen: 0
-      sheen_tint: 0.5
-      clear_coat: 0
-      clear_coat_roughness: 0.0299999993
-      ior: 1.45000005
-      transmission: 0
-      transmission_roughness: 0
-      emission: 0
-    vertex_color_only: false
+    handle: 11540478981875672619
   - type_name: Material
     handle: 9351133328134294989
     albedo_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     normal_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     metallic_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     roughness_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     ao_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     draw_settings:
       cull_mode: 0
       line_width: 1
@@ -499,16 +1780,16 @@ LocalAssets:
       albedo_color: [1, 1, 1]
       subsurface_color: [1, 1, 1]
       subsurface_factor: 0
-      subsurface_radius: [1, 0.200000003, 0.100000001]
-      metallic: 0.100000001
+      subsurface_radius: [1, 0.2, 0.1]
+      metallic: 0.1
       specular: 0.5
       specular_tint: 0
-      roughness: 0.300000012
+      roughness: 0.3
       sheen: 0
       sheen_tint: 0.5
       clear_coat: 0
-      clear_coat_roughness: 0.0299999993
-      ior: 1.45000005
+      clear_coat_roughness: 0.03
+      ior: 1.45
       transmission: 0
       transmission_roughness: 0
       emission: 0
@@ -517,19 +1798,19 @@ LocalAssets:
     handle: 9269403427852511889
     albedo_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     normal_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     metallic_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     roughness_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     ao_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     draw_settings:
       cull_mode: 0
       line_width: 1
@@ -541,16 +1822,16 @@ LocalAssets:
       albedo_color: [1, 1, 1]
       subsurface_color: [1, 1, 1]
       subsurface_factor: 0
-      subsurface_radius: [1, 0.200000003, 0.100000001]
-      metallic: 0.100000001
+      subsurface_radius: [1, 0.2, 0.1]
+      metallic: 0.1
       specular: 0.5
       specular_tint: 0
-      roughness: 0.300000012
+      roughness: 0.3
       sheen: 0
       sheen_tint: 0.5
       clear_coat: 0
-      clear_coat_roughness: 0.0299999993
-      ior: 1.45000005
+      clear_coat_roughness: 0.03
+      ior: 1.45
       transmission: 0
       transmission_roughness: 0
       emission: 0
@@ -559,19 +1840,19 @@ LocalAssets:
     handle: 14316066197675944754
     albedo_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     normal_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     metallic_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     roughness_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     ao_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     draw_settings:
       cull_mode: 0
       line_width: 1
@@ -583,16 +1864,58 @@ LocalAssets:
       albedo_color: [1, 1, 1]
       subsurface_color: [1, 1, 1]
       subsurface_factor: 0
-      subsurface_radius: [1, 0.200000003, 0.100000001]
-      metallic: 0.100000001
+      subsurface_radius: [1, 0.2, 0.1]
+      metallic: 0.1
       specular: 0.5
       specular_tint: 0
-      roughness: 0.300000012
+      roughness: 0.3
       sheen: 0
       sheen_tint: 0.5
       clear_coat: 0
-      clear_coat_roughness: 0.0299999993
-      ior: 1.45000005
+      clear_coat_roughness: 0.03
+      ior: 1.45
+      transmission: 0
+      transmission_roughness: 0
+      emission: 0
+    vertex_color_only: false
+  - type_name: Material
+    handle: 1878344000892373111
+    albedo_texture_:
+      asset_handle_: 0
+      type_name_: ""
+    normal_texture_:
+      asset_handle_: 0
+      type_name_: ""
+    metallic_texture_:
+      asset_handle_: 0
+      type_name_: ""
+    roughness_texture_:
+      asset_handle_: 0
+      type_name_: ""
+    ao_texture_:
+      asset_handle_: 0
+      type_name_: ""
+    draw_settings:
+      cull_mode: 0
+      line_width: 1
+      polygon_mode: 0
+      blending: false
+      blending_src_factor: 6
+      blending_dst_factor: 7
+    material_properties:
+      albedo_color: [1, 1, 1]
+      subsurface_color: [1, 1, 1]
+      subsurface_factor: 0
+      subsurface_radius: [1, 0.2, 0.1]
+      metallic: 0.1
+      specular: 0.5
+      specular_tint: 0
+      roughness: 0.3
+      sheen: 0
+      sheen_tint: 0.5
+      clear_coat: 0
+      clear_coat_roughness: 0.03
+      ior: 1.45
       transmission: 0
       transmission_roughness: 0
       emission: 0
@@ -601,19 +1924,19 @@ LocalAssets:
     handle: 4977678215339870791
     albedo_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     normal_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     metallic_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     roughness_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     ao_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     draw_settings:
       cull_mode: 0
       line_width: 1
@@ -625,16 +1948,16 @@ LocalAssets:
       albedo_color: [1, 1, 1]
       subsurface_color: [1, 1, 1]
       subsurface_factor: 0
-      subsurface_radius: [1, 0.200000003, 0.100000001]
-      metallic: 0.100000001
+      subsurface_radius: [1, 0.2, 0.1]
+      metallic: 0.1
       specular: 0.5
       specular_tint: 0
-      roughness: 0.300000012
+      roughness: 0.3
       sheen: 0
       sheen_tint: 0.5
       clear_coat: 0
-      clear_coat_roughness: 0.0299999993
-      ior: 1.45000005
+      clear_coat_roughness: 0.03
+      ior: 1.45
       transmission: 0
       transmission_roughness: 0
       emission: 0
@@ -643,19 +1966,19 @@ LocalAssets:
     handle: 9799836859279381246
     albedo_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     normal_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     metallic_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     roughness_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     ao_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     draw_settings:
       cull_mode: 0
       line_width: 1
@@ -667,16 +1990,16 @@ LocalAssets:
       albedo_color: [1, 1, 1]
       subsurface_color: [1, 1, 1]
       subsurface_factor: 0
-      subsurface_radius: [1, 0.200000003, 0.100000001]
-      metallic: 0.100000001
+      subsurface_radius: [1, 0.2, 0.1]
+      metallic: 0.1
       specular: 0.5
       specular_tint: 0
-      roughness: 0.300000012
+      roughness: 0.3
       sheen: 0
       sheen_tint: 0.5
       clear_coat: 0
-      clear_coat_roughness: 0.0299999993
-      ior: 1.45000005
+      clear_coat_roughness: 0.03
+      ior: 1.45
       transmission: 0
       transmission_roughness: 0
       emission: 0
@@ -685,19 +2008,19 @@ LocalAssets:
     handle: 571672489586621582
     albedo_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     normal_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     metallic_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     roughness_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     ao_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     draw_settings:
       cull_mode: 0
       line_width: 1
@@ -709,16 +2032,16 @@ LocalAssets:
       albedo_color: [1, 1, 1]
       subsurface_color: [1, 1, 1]
       subsurface_factor: 0
-      subsurface_radius: [1, 0.200000003, 0.100000001]
-      metallic: 0.100000001
+      subsurface_radius: [1, 0.2, 0.1]
+      metallic: 0.1
       specular: 0.5
       specular_tint: 0
-      roughness: 0.300000012
+      roughness: 0.3
       sheen: 0
       sheen_tint: 0.5
       clear_coat: 0
-      clear_coat_roughness: 0.0299999993
-      ior: 1.45000005
+      clear_coat_roughness: 0.03
+      ior: 1.45
       transmission: 0
       transmission_roughness: 0
       emission: 0
@@ -727,19 +2050,19 @@ LocalAssets:
     handle: 8052886546139435977
     albedo_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     normal_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     metallic_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     roughness_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     ao_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     draw_settings:
       cull_mode: 0
       line_width: 1
@@ -751,16 +2074,16 @@ LocalAssets:
       albedo_color: [1, 1, 1]
       subsurface_color: [1, 1, 1]
       subsurface_factor: 0
-      subsurface_radius: [1, 0.200000003, 0.100000001]
-      metallic: 0.100000001
+      subsurface_radius: [1, 0.2, 0.1]
+      metallic: 0.1
       specular: 0.5
       specular_tint: 0
-      roughness: 0.300000012
+      roughness: 0.3
       sheen: 0
       sheen_tint: 0.5
       clear_coat: 0
-      clear_coat_roughness: 0.0299999993
-      ior: 1.45000005
+      clear_coat_roughness: 0.03
+      ior: 1.45
       transmission: 0
       transmission_roughness: 0
       emission: 0
@@ -769,19 +2092,19 @@ LocalAssets:
     handle: 465574329098673888
     albedo_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     normal_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     metallic_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     roughness_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     ao_texture_:
       asset_handle_: 0
-      asset_type_name_: ""
+      type_name_: ""
     draw_settings:
       cull_mode: 0
       line_width: 1
@@ -793,16 +2116,16 @@ LocalAssets:
       albedo_color: [1, 1, 1]
       subsurface_color: [1, 1, 1]
       subsurface_factor: 0
-      subsurface_radius: [1, 0.200000003, 0.100000001]
-      metallic: 0.100000001
+      subsurface_radius: [1, 0.2, 0.1]
+      metallic: 0.1
       specular: 0.5
       specular_tint: 0
-      roughness: 0.300000012
+      roughness: 0.3
       sheen: 0
       sheen_tint: 0.5
       clear_coat: 0
-      clear_coat_roughness: 0.0299999993
-      ior: 1.45000005
+      clear_coat_roughness: 0.03
+      ior: 1.45
       transmission: 0
       transmission_roughness: 0
       emission: 0
